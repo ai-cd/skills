@@ -1,0 +1,10 @@
+apiVersion: apps.kubeblocks.io/v1alpha1
+kind: Cluster
+metadata:
+  name: postgresql-sample
+  labels:
+    managed-by: sealos-skills
+    db-type: postgresql
+spec:
+  clusterDefinitionRef: postgresql
+  clusterVersionRef: postgresql-14.8.0

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-name
+  labels:
+    app: app-name
+    managed-by: sealos-skills
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-name
+  template:
+    metadata:
+      labels:
+        app: app-name
+    spec:
+      containers:
+        - name: app-name
+          image: nginx:latest
+          ports:
+            - containerPort: 80
