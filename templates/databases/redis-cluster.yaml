@@ -1,0 +1,10 @@
+apiVersion: apps.kubeblocks.io/v1alpha1
+kind: Cluster
+metadata:
+  name: redis-sample
+  labels:
+    managed-by: sealos-skills
+    db-type: redis
+spec:
+  clusterDefinitionRef: redis
+  clusterVersionRef: redis-7.0.6
